@@ -75,7 +75,7 @@ This is what the NUnit group was talking about with `TestCase`
         }
 ```
 
-## Fix the test
+## Fix the code
 
 T Rump's code was obviously wrong so we fix it with a very simplistic fix. 
 
@@ -96,16 +96,21 @@ Works cross platform
 
 ### Add to AppVeyor
 
+[https://www.appveyor.com/](https://www.appveyor.com/)
+
 Really easy setup through `appveyor.yml`
 
-Just need to go in and find the project in the project list from github. 
+Just need to go in and find the project in the [appveyor ci interface](https://ci.appveyor.com) in the project list from github. 
 
 ### Add to travis ci ( not working )
+
+[https://travis-ci.org/](https://travis-ci.org/)
 
 Haven't gotten it working but that is more of a dotnet core problem than a xunit.net problem. 
 
 Not working configuration is in the `.travis.yml`
 
+According to documentation the file included should work, but doesn't. 
 
 ## Conclusions
 
@@ -119,3 +124,4 @@ Not working configuration is in the `.travis.yml`
 * Dotnet core integration is still beta and makes quite a few changes.
 * Like NUnit way ahead of MSTest
 * Integration with Visual Studio is dependent on third party tools.
+* Still early days for Dotnet Core which is of course not xUnit's fault.
