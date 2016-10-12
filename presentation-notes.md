@@ -3,6 +3,18 @@
 Unit testing our latest intern T Rump's superduper VAT calculator
 I have a feeling that he is FIRED
 
+
+## XUnit.net
+
+[https://xunit.github.io/](https://xunit.github.io/)
+
+Unit testing framework for dotnet
+
+* Works with pretty much any flavor of dotnet
+* integrates with pretty much all test runners
+* Open source under the umbrella of the .NET Foundation
+* Seems to be Microsoft's preferred tool (MSTest boo)
+
 ## Prereqs
 
 install dotnet core [https://www.microsoft.com/net/core#macos](https://www.microsoft.com/net/core#macos)
@@ -59,6 +71,15 @@ install dotnet core [https://www.microsoft.com/net/core#macos](https://www.micro
         }
 ```
 
-## Add to AppVeyor
+## CI Integration
 
-## Add to travis ci ( not working )
+Really easy, since it is all commandline and dotnet/nuget
+
+Integrates into the dotnet commandline affording us the `dotnet test` command.
+
+### Add to AppVeyor
+
+ appveyor.yml
+### Add to travis ci ( not working )
+
+ Haven't gotten it working but that is more of a dotnet core problem than a xunit.net problem. 
