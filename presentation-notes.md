@@ -22,6 +22,13 @@ Install dotnet core [https://www.microsoft.com/net/core#macos](https://www.micro
 **Note:** PATH not set see here [https://github.com/dotnet/cli/issues/4225](https://github.com/dotnet/cli/issues/4225)
 
 ## Clone and run project
+
+Run `dotnet restore` in the project root folder to restore all nuget packages in all projects.
+
+Run `dotnet build **/project.json`to build all projects.
+
+Navigete to `src/vatCalc` and run `dotnet run add 100 25` to run the cli program adding 25% vat to 100 kr. 
+
 ## Add xUnit.net project
 
 * mkdir ./test/vatCalc.test
@@ -32,6 +39,12 @@ Install dotnet core [https://www.microsoft.com/net/core#macos](https://www.micro
     "xunit": "2.2.0-beta2-build3300",
     "dotnet-test-xunit": "2.2.0-preview2-build1029",
     "vatCalc.lib": "1.0.0"
+
+## Run the unit tests 
+
+navigate to the `test/vatCalc.test/` directory.
+
+Run `dotnet test` to run xUnit's Dotnet Core runner. 
 
 ## Test AddVAT
 
