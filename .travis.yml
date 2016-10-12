@@ -6,4 +6,4 @@ install:
 script:
   - dotnet build **/project.json
   - cd test/vatCalc.test/
-  - dotnet test
+  - dotnet test -xml ../../result.xml

@@ -11,13 +11,13 @@ I have a feeling that he is FIRED
 Unit testing framework for dotnet
 
 * Works with pretty much any flavor of dotnet
-* integrates with pretty much all test runners
+* Integrates with pretty much all test runners
 * Open source under the umbrella of the .NET Foundation
 * Seems to be Microsoft's preferred tool (MSTest boo)
 
 ## Prereqs
 
-install dotnet core [https://www.microsoft.com/net/core#macos](https://www.microsoft.com/net/core#macos)
+Install dotnet core [https://www.microsoft.com/net/core#macos](https://www.microsoft.com/net/core#macos)
 **Note:** PATH not set see here [https://github.com/dotnet/cli/issues/4225](https://github.com/dotnet/cli/issues/4225)
 
 ## Clone and run project
@@ -64,6 +64,8 @@ install dotnet core [https://www.microsoft.com/net/core#macos](https://www.micro
 
 ## Fix the test
 
+T Rump's code was obviously wrong so we fix it with a very simplistic fix. 
+
 ```
         public static decimal SubtractVAT(decimal originalPrice, decimal vatPercentage)
         {    
@@ -77,9 +79,15 @@ Really easy, since it is all commandline and dotnet/nuget
 
 Integrates into the dotnet commandline affording us the `dotnet test` command.
 
+Works cross platform
+
 ### Add to AppVeyor
 
- appveyor.yml
+Really easy setup through `appveyor.yml`
+
+Just need to go in and find the project in the project list from github. 
+
 ### Add to travis ci ( not working )
 
  Haven't gotten it working but that is more of a dotnet core problem than a xunit.net problem. 
+ configuration is in the `.travis.yml`
