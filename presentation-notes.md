@@ -61,4 +61,4 @@ install dotnet core [https://www.microsoft.com/net/core#macos](https://www.micro
 
 ## Add to AppVeyor
 
-## Add to travis ci
+## Add to travis ci ( not working )
