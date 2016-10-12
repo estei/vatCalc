@@ -22,39 +22,43 @@ install dotnet core [https://www.microsoft.com/net/core#macos](https://www.micro
 
 ## Test AddVAT
 
+```
+
+        [Fact]
+        public void Adding_25_percent_VAT_to_100_is_125() 
+        {
+            Assert.Equal(125, VATCalculator.AddVAT(100, 25));
+        }
+
+        [Fact]
+        public void Adding_20_percent_VAT_to_200_is_240() 
+        {
+            Assert.True(VATCalculator.AddVAT(200, 20) == 240);
+        }
+
+```
 ## Test SubtractVAT
+
+
+```
+        [Theory]
+        [InlineData(100, 25, 80.0)]
+        [InlineData(100, 20, "83.33333333333333333333333333")]
+        public void Subtracting(decimal value, decimal percentage, decimal result)
+        {
+            Assert.Equal(result, VATCalculator.SubtractVAT(value, percentage));
+        }
+```
+
+## Fix the test
+
+```
+        public static decimal SubtractVAT(decimal originalPrice, decimal vatPercentage)
+        {    
+            return (originalPrice / ( 100 + vatPercentage )) * 100;
+        }
+```
 
 ## Add to AppVeyor
 
-appveyor.yml
-
-```
-version: 1.0.{build}
-build_script:
-- cmd: >-
-    dotnet restore
-
-    dotnet build **/project.json
-test_script:
-- cmd: >-
-    cd test\vatCalc.test
-    
-    dotnet test
-
-```
-
 ## Add to travis ci
-.travis.yml
-
-```
-language: csharp
-mono: none
-dotnet: 1.0.0-preview2-003131
-install:
-  - dotnet restore
-script:
-  - dotnet build **/project.json
-  - cd test/vatCalc.test/
-  - dotnet test
-
-```ß

@@ -8,8 +8,8 @@ namespace ConsoleApplication
         public static void Main(string[] args)
         {
             var operation = args[0];
-            var price = double.Parse(args[1]);
-            var vatPercentage = double.Parse(args[2]);
+            var price = decimal.Parse(args[1]);
+            var vatPercentage = decimal.Parse(args[2]);
 
             if(operation == "add")
             {

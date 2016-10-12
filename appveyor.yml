@@ -1,0 +1,11 @@
+version: 1.0.{build}
+build_script:
+- cmd: >-
+    dotnet restore
+
+    dotnet build **/project.json
+test_script:
+- cmd: >-
+    cd test\vatCalc.test
+    
+    dotnet test

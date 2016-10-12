@@ -4,19 +4,19 @@ namespace vatCalc.lib
 {
     public static class VATCalculator
     {
-        public static double AddVAT(double originalPrice, double vatPercentage)
+        public static decimal AddVAT(decimal originalPrice, decimal vatPercentage)
         {    
             var vat = CalculateVAT(originalPrice, vatPercentage);
             return originalPrice + vat;
         }
 
-        public static double SubtractVAT(double originalPrice, double vatPercentage)
+        public static decimal SubtractVAT(decimal originalPrice, decimal vatPercentage)
         {    
-            var vat = CalculateVAT(originalPrice, vatPercentage);
-            return originalPrice - vat;
+           var vat = CalculateVAT(originalPrice, vatPercentage);
+           return originalPrice - vat;
         }
 
-        private static double CalculateVAT(double price, double vatPercentage)
+        private static decimal CalculateVAT(decimal price, decimal vatPercentage)
         {
             return (price / 100) * vatPercentage;
         }
