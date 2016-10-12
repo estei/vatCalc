@@ -6,9 +6,9 @@ Presentation notes / Documentation  can be found in the [presentation-notes.md](
 
 ## CI
 
-[![Appveyor Build status](https://ci.appveyor.com/api/projects/status/h3d69tktnud64q4d/branch/master?svg=true)]
+![Appveyor Build status](https://ci.appveyor.com/api/projects/status/h3d69tktnud64q4d/branch/master?svg=true)
 
-[![Travis Status](https://travis-ci.org/estei/vatCalc.svg?branch=master)]
+![Travis Status](https://travis-ci.org/estei/vatCalc.svg?branch=master)
 
 ## Github repository
 
