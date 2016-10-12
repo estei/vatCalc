@@ -10,10 +10,11 @@ I have a feeling that he is FIRED
 
 Unit testing framework for dotnet
 
-* Works with pretty much any flavor of dotnet
+* Works with pretty much any flavor of [dotnet](https://xunit.github.io/#runners)
 * Integrates with pretty much all test runners
 * Open source under the umbrella of the .NET Foundation
 * Seems to be Microsoft's preferred tool (MSTest boo)
+* A bunch of built in assertions [comparison doc](https://xunit.github.io/docs/comparisons.html)
 
 ## Prereqs
 
@@ -21,12 +22,12 @@ Install dotnet core [https://www.microsoft.com/net/core#macos](https://www.micro
 **Note:** PATH not set see here [https://github.com/dotnet/cli/issues/4225](https://github.com/dotnet/cli/issues/4225)
 
 ## Clone and run project
-## Add xunit.net project
+## Add xUnit.net project
 
 * mkdir ./test/vatCalc.test
 * dotnet new -t xunittest
 
-* update to new xunit
+* update to new xunit in `project.json`
 
     "xunit": "2.2.0-beta2-build3300",
     "dotnet-test-xunit": "2.2.0-preview2-build1029",
@@ -34,6 +35,9 @@ Install dotnet core [https://www.microsoft.com/net/core#macos](https://www.micro
 
 ## Test AddVAT
 
+Super simple tests just to show `[Fact]` in action.
+
+Fact is used for traditional unit tests testing one thing once.
 ```
 
         [Fact]
@@ -51,11 +55,15 @@ Install dotnet core [https://www.microsoft.com/net/core#macos](https://www.micro
 ```
 ## Test SubtractVAT
 
-Theory tests are really nice for encapsulating test code. 
+Theory tests are really nice for encapsulating test code.
+
+A more data driven way of writing tests.  
 
 Many times you would either be copying code between tests or externalize it out into methods called from all tests.
 
 They get rid of a lot of copied code and makes the test code more readable.
+
+This is what the NUnit group was talking about with `TestCase`
 
 ```
         [Theory]
@@ -94,8 +102,9 @@ Just need to go in and find the project in the project list from github.
 
 ### Add to travis ci ( not working )
 
- Haven't gotten it working but that is more of a dotnet core problem than a xunit.net problem. 
- configuration is in the `.travis.yml`
+Haven't gotten it working but that is more of a dotnet core problem than a xunit.net problem. 
+
+Not working configuration is in the `.travis.yml`
 
 
 ## Conclusions
@@ -107,3 +116,6 @@ Just need to go in and find the project in the project list from github.
 * Integrates with many runners in for example Visual Studio
     * ReSharper, CodeRush, TestDriven.NET and Xamarin according to the website.
 * Test results can be output as xml for further analysis / display in CI server.
+* Dotnet core integration is still beta and makes quite a few changes.
+* Like NUnit way ahead of MSTest
+* Integration with Visual Studio is dependent on third party tools.

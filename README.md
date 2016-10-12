@@ -1,5 +1,7 @@
 # xUnit.net
 
+Meant as a live presentation so no PowerPoint, see the presentation notes below.
+
 A very very simple simple test program to quickly show howto get xUnit.net into a dotnet core project. 
 
 Presentation notes / Documentation  can be found in the [presentation-notes.md](presentation-notes.md) file.
