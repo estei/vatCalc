@@ -9,6 +9,8 @@ test_script:
     cd test\vatCalc.test
     
     dotnet test -xml ..\..\result.xml
+
+    cd ..\..\
 after_test:
 - ps: >-
     $wc = New-Object 'System.Net.WebClient'
