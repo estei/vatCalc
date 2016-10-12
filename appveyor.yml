@@ -9,3 +9,9 @@ test_script:
     cd test\vatCalc.test
     
     dotnet test -xml ..\..\result.xml
+
+after_test:
+- ps: >-
+    $wc = New-Object 'System.Net.WebClient'
+
+    $wc.UploadFile("https://ci.appveyor.com/api/testresults/xunit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\results.xml))

@@ -51,6 +51,11 @@ Install dotnet core [https://www.microsoft.com/net/core#macos](https://www.micro
 ```
 ## Test SubtractVAT
 
+Theory tests are really nice for encapsulating test code. 
+
+Many times you would either be copying code between tests or externalize it out into methods called from all tests.
+
+They get rid of a lot of copied code and makes the test code more readable.
 
 ```
         [Theory]
@@ -91,3 +96,14 @@ Just need to go in and find the project in the project list from github.
 
  Haven't gotten it working but that is more of a dotnet core problem than a xunit.net problem. 
  configuration is in the `.travis.yml`
+
+
+## Conclusions
+
+* Really simple to get started with.
+* Documentation is a bit sparse
+* Easy to integrate with CI servers since it is all command line.
+* Cross platform
+* Integrates with many runners in for example Visual Studio
+    * ReSharper, CodeRush, TestDriven.NET and Xamarin according to the website.
+* Test results can be output as xml for further analysis / display in CI server.
