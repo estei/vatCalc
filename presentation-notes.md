@@ -34,9 +34,12 @@ build_script:
 - cmd: >-
     dotnet restore
 
-    dotnet build
+    dotnet build **/project.json
 test_script:
-- cmd: dotnet test
+- cmd: >-
+    cd test\vatCalc.test
+    
+    dotnet test
 
 ```
 
@@ -51,6 +54,7 @@ install:
   - dotnet restore
 script:
   - dotnet build **/project.json
+  - cd test/vatCalc.test/
   - dotnet test
 
-```
+```ß
