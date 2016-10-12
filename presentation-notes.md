@@ -77,7 +77,7 @@ This is what the NUnit group was talking about with `TestCase`
 
 ## Fix the code
 
-T Rump's code was obviously wrong so we fix it with a very simplistic fix. 
+T Rump's code was obviously wrong, so we fix it with a very simplistic fix.
 
 ```
         public static decimal SubtractVAT(decimal originalPrice, decimal vatPercentage)
